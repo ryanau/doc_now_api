@@ -8,14 +8,25 @@ end
 gem 'rails', '~> 5.1.1'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
-gem 'graphql'
+gem 'redis'
+gem 'sidekiq'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'awesome_print'
+gem 'active_model_serializers'
+gem 'geokit-rails'
+gem 'annotate'
 
 # gem 'capistrano-rails', group: :development
 
-# gem 'rack-cors'
+group :test do
+  gem 'database_cleaner'
+end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :development do

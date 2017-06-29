@@ -14,3 +14,7 @@
 !/tmp/.keep
 
 .byebug_history
+*.swp
+*.swo
+.DS_Store
+tmp
