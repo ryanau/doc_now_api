@@ -1,5 +1,14 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # Mailgun.configure do |config|
+  #     config.api_key = 'your-secret-api-key'
+  # end
+
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV['MAILGUN_SECRET'],
+    domain: 'mail.doctornow.io',
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

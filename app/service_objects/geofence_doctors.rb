@@ -1,6 +1,6 @@
 class GeofenceDoctors
   # 0.5 km
-  DISTANCE = 5
+  DISTANCE = 100
 
   def initialize(origin)
     @origin = origin

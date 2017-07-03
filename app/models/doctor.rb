@@ -22,4 +22,7 @@ class Doctor < ApplicationRecord
                    :lng_column_name => :lng
 
   has_many :bookings
+
+  validates :english_name, uniqueness: true
+  validates :chinese_name, uniqueness: true
 end

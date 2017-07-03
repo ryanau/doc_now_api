@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Booking Summary (<%= @booking.booking_number%>)</h2>
+    <br>
+    <h4>Personal Info</h4>
+    <p>Phone: <%= @booking.phone %></p>
+    <p>Name: <%= @booking.name %></p>
+    <p>HKID: <%= @booking.hkid %></p>
+    <br>
+    <h4>Doctor Selected</h4>
+    <p>Clinic Phone: <%= @doctor.phone %></p>
+    <p>Doctor Name: <%= @doctor.chinese_name %></p>
+    <p>Doctor Name: <%= @doctor.english_name %></p>
+    <p>Address: <%= @doctor.chinese_address %></p>
+  </body>
+</html>
