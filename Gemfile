@@ -16,6 +16,7 @@ gem 'active_model_serializers'
 gem 'geokit-rails'
 gem 'annotate'
 gem 'mailgun-ruby', '~>1.1.6'
+gem 'faker'
 
 # gem 'capistrano-rails', group: :development
 
@@ -27,7 +28,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'faker'
   gem 'dotenv-rails'
 end
 
