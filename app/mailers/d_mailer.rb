@@ -5,7 +5,7 @@ class DMailer < ApplicationMailer
     @booking = booking
     @doctor = booking.doctor
     mail(
-      to: 'ryan.au852@gmail.com',
+      to: 'doctornowio@gmail.com',
       subject: "Booking summary: #{@booking.name} | #{booking.phone} | #{@booking.booking_number}",
     )
   end
