@@ -7,6 +7,7 @@
 #  phone          :string           not null
 #  hkid           :string
 #  booking_number :string           not null
+#  doctor_id      :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #

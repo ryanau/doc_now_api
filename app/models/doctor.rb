@@ -12,6 +12,7 @@
 #  lng             :float
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  source_id       :integer
 #
 
 class Doctor < ApplicationRecord
@@ -23,6 +24,6 @@ class Doctor < ApplicationRecord
 
   has_many :bookings
 
-  validates :english_name, uniqueness: true
-  validates :chinese_name, uniqueness: true
+  validates :english_name, uniqueness: { scope: :chinese_address }
+  validates :chinese_name, uniqueness: { scope: :chinese_address }
 end

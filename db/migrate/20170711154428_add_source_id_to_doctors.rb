@@ -1,0 +1,5 @@
+class AddSourceIdToDoctors < ActiveRecord::Migration[5.1]
+  def change
+    add_column :doctors, :source_id, :integer
+  end
+end

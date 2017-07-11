@@ -1,6 +1,6 @@
 class GeofenceDoctors
   # 0.5 km
-  DISTANCE = 100
+  DISTANCE = 0.5
 
   def initialize(origin)
     @origin = origin
@@ -13,7 +13,7 @@ class GeofenceDoctors
       hash = d.attributes
       d_geo = Geokit::LatLng.new(d["lat"], d["lng"])
       hash["distance"] = @origin_geo.distance_to(d_geo)
-      hash["walk"] = (hash["distance"] / 5 * 60).ceil
+      hash["walk"] = (hash["distance"] / 4 * 60).ceil
       hash
     end
     with_distance.sort_by { |d| d["distance"] }
