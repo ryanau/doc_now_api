@@ -16,5 +16,14 @@
     <p>Doctor Name: <%= @doctor.chinese_name %></p>
     <p>Doctor Name: <%= @doctor.english_name %></p>
     <p>Address: <%= @doctor.chinese_address %></p>
+    <br>
+    <h4>Nearby Doctors</h4>
+    <% @nearby_doctors.each do |d| %>
+      <p>Clinic Phone: <%= d['phone'] %></p>
+      <p>Doctor Name: <%= d['chinese_name'] %></p>
+      <p>Doctor Name: <%= d['english_name'] %></p>
+      <p>Address: <%= d['chinese_address'] %></p>
+      <br>
+    <% end %>
   </body>
 </html>
