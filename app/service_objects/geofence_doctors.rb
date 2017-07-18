@@ -8,7 +8,7 @@ class GeofenceDoctors
   end
 
   def nearby
-    doctors = Doctor.within(DISTANCE, origin: [@origin[:lat], @origin[:lng]]).all
+    doctors = Doctor.within(DISTANCE, origin: [@origin[:lat], @origin[:lng]]).limit(50)
     with_distance = doctors.map do |d|
       hash = d.attributes
       d_geo = Geokit::LatLng.new(d["lat"], d["lng"])
